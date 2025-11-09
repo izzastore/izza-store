@@ -57,3 +57,21 @@ textarea { min-height: 90px; }
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
 }
+.img-container {
+    width: 100%;
+    height: 150px; /* tinggi tetap semua */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* menjaga proporsi gambar */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.img-container img:hover {
+    transform: scale(1.05);
+}
