@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>izza-store</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">Welcome In Izza Store</header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <h2 class="title">Daftar Produk</h2>
+
+    <!-- TEMPAT PRODUK -->
+    <div class="grid" id="productList"></div>
+
+    <!-- BUTTON BUKA KERANJANG -->
+    <button class="btn open-cart" onclick="toggleCart()">Buka Keranjang</button>
+  </main>
+
+  <!-- SIDEBAR KERANJANG -->
+  <aside id="cartBox" class="cart-box">
+    <h3>Keranjang</h3>
+
+    <div id="cartItems"></div>
+
+    <br />
+    <button class="btn" onclick="checkout()">Checkout</button>
+    <button class="btn close" onclick="toggleCart()">Tutup</button>
+  </aside>
+
+  <!-- FIREBASE (BELUM DIPAKAI SEKARANG) -->
+ <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDCfm6BomU0NO8AOBm2b4gKhzII4kjl0do",
+    authDomain: "iza-store.firebaseapp.com",
+    projectId: "iza-store",
+    storageBucket: "iza-store.firebasestorage.app",
+    messagingSenderId: "450360756553",
+    appId: "1:450360756553:web:baba3df684b032f6b03298",
+    measurementId: "G-MCYRGDYT41"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+  <!-- SCRIPT JS -->
+  <script src="script.js"></script>
+
+  <!-- ✅ MODAL ZOOM GAMBAR -->
+  <div id="imgModal" class="img-modal" onclick="closeImgModal()">
+    <img id="modalImg">
+  </div>
+
+</body>
+</html>
