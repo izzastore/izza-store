@@ -1,8 +1,8 @@
 // PRODUK
 const products = [
-    { id:1, name:"Akun Roblox (Fist It)", price:40000, img:"gambar1.jpg" },
-    { id:2, name:"Akun Roblox (Fist It)", price:35000, img:"gambar2.jpg" },
-    { id:3, name:"Akun Roblox (Fist It)", price:40000, img:"https://via.placeholder.com/300x150?text=Roblox" }
+  { id:1, name:"Akun Roblox (Fist It)", price:40000, img:"./gambar1.jpg" },
+  { id:2, name:"Akun Roblox (Fist It)", price:35000, img:"./gambar2.jpg" },
+  { id:3, name:"Akun Roblox (Fist It)", price:40000, img:"https://via.placeholder.com/300x150?text=Roblox" }
 ];
 
 const cart = [];
