@@ -24,13 +24,14 @@ function renderProducts() {
     let html = "";
     products.forEach(p => {
 
-        // ✅ Jika sudah dibeli, tombol diganti
         const disabled = isBought(p.id) ? "disabled" : "";
         const btnText = isBought(p.id) ? "Sudah Dibeli ✅" : "Beli";
 
         html += `
         <div class='card'>
-            <img src='${p.img}' alt='${p.name}' onclick="openImgModal('${p.img}')">
+            <div class="img-container">
+                <img src='${p.img}' alt='${p.name}' onclick="openImgModal('${p.img}')">
+            </div>
             <h3>${p.name}</h3>
             <p>Harga: Rp ${p.price.toLocaleString()}</p>
 
